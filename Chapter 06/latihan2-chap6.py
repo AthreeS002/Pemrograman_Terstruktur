@@ -1,27 +1,27 @@
-def bintang1(n):
+def starFunction1(n):
     for i in range (0, n):
         for j in range(0, i+1):
             print("* ", end = "")
         print("\r")
         
 
-def bintang2(n):
-    for i in range(n, -1, -1):
-        for j in range(0, i + 1):
+def starFunction2(n):
+    for i in range(n, 0, -1):
+        for j in range(1, i + 1):
             print("* ", end = "")
         print("\r")
 
 
 def gabung(n):
-    bintang1(n//2)
+    starFunction1(n//2)
     if(n % 2 == 0):
-       bintang2(n//2)
+       starFunction2(n//2)
     else:
-       bintang2((n//3)+1)
+       starFunction2((n//2)+1)
 
 
-bintang1(4)
+starFunction1(4)
 print()
-bintang2(4)
+starFunction2(4)
 print()
 gabung(7)
